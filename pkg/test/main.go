@@ -7,5 +7,6 @@ import (
 func main() {
 
 	nHTML := nodes.NewNode()
+	nHTML.SetType(nodes)
 
 }
