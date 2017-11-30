@@ -45,6 +45,11 @@ func (n *HTMLNode) SetID(s string) {
 	n.Attributes.ID = s
 }
 
+// SetType sets the element type (ie. html, head, body, etc.)
+func (n *HTMLNode) SetType(s string) {
+	n.Type = s
+}
+
 // AddClass adds a class to to the object.
 func (n *HTMLNode) AddClass(s string) {
 	n.Attributes.Classes[s] = v{}
