@@ -1,5 +1,8 @@
 package nodes
 
+import "errors"
+
+/* List of HTML element types. */
 const (
 	ElementHTML       = "html"
 	ElementLink       = "link"
@@ -111,4 +114,8 @@ const (
 	ElementShadow     = "shadow"
 	ElementSlot       = "slot"
 	ElementTemplate   = "template"
+)
+
+var (
+	errNameConflict = errors.New("cannot contain multiple files of the same name")
 )
