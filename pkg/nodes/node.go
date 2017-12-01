@@ -1,5 +1,9 @@
 package nodes
 
+const (
+	typeInnerHTML = "innerHTML"
+)
+
 // HTMLNode represents a single HTML element.
 type HTMLNode struct {
 	Type       string         `json:"type"`
@@ -37,6 +41,12 @@ func (n *HTMLNode) NewChild(s string) *HTMLNode {
 	n.Children = append(n.Children, child)
 
 	return child
+}
+
+// AddInnerHTML adds node of type "innerhtml" to n, which will be parsed as text.
+func (n *HTMLNode) AddInnerHTML(s string) {
+	i := n.NewChild(typeInnerHTML)
+	i.SetID(s)
 }
 
 // SetID sets the ID of the node.

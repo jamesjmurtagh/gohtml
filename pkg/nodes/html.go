@@ -40,6 +40,7 @@ func (fs *Filesystem) AddFile(f *HTMLFile) error {
 	}
 
 	fs.fileNames[f.Name] = v{}
+	fs.Files = append(fs.Files, f)
 	return nil
 }
 

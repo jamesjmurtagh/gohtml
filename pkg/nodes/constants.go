@@ -5,7 +5,9 @@ import "errors"
 /* List of HTML element types. */
 const (
 	ElementHTML       = "html"
+	ElementHead       = "head"
 	ElementLink       = "link"
+	ElementTitle      = "title"
 	ElementMeta       = "meta"
 	ElementStyle      = "style"
 	ElementScript     = "script"
